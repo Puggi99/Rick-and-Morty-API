@@ -1,0 +1,22 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row class="toolbar-container">
+    <span class="main-title">Rick and Morty API</span>
+    <form class="example-form" [formGroup]="searchForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>Search Character</mat-label>
+        <input matInput placeholder="Ex. Rick" value="" type="text" name="" formControlName="search"
+          placeholder="search character" id="">
+      </mat-form-field>
+      <button mat-icon-button (click)="changeThemes()">
+        <mat-icon>{{isLight ? "dark_mode" : "light_mode"}}</mat-icon>
+      </button>
+    </form>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-grid-list cols="3" *ngIf="characterList?.length" class="container">
+  <mat-grid-tile *ngFor="let character of characterList">
+    <app-character [character]="character"></app-character>
+  </mat-grid-tile>
+</mat-grid-list>

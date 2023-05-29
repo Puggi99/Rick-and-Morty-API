@@ -1,0 +1,27 @@
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: max-content;
+
+}
+
+.main-title{
+  font-family: 'Fredoka One', cursive;
+}
+
+
+.toolbar{
+  background-color: #4DD0E1;
+}
+
+.toolbar-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.example-form{
+  padding-top: 20px;
+}
