@@ -1,0 +1,111 @@
+
+// $grigio-azzurrino: (
+//     50 : #f6fdfd,
+//     100 : #e8f9fb,
+//     200 : #d9f5f9,
+//     300 : #c9f1f6,
+//     400 : #beeef4,
+//     500 : #b2ebf2,
+//     600 : #abe9f0,
+//     700 : #a2e5ee,
+//     800 : #99e2ec,
+//     900 : #8adde8,
+//     A100 : #ffffff,
+//     A200 : #ffffff,
+//     A400 : #ffffff,
+//     A700 : #f9feff,
+//     contrast: (
+//         50 : #000000,
+//         100 : #000000,
+//         200 : #000000,
+//         300 : #000000,
+//         400 : #000000,
+//         500 : #000000,
+//         600 : #000000,
+//         700 : #000000,
+//         800 : #000000,
+//         900 : #000000,
+//         A100 : #000000,
+//         A200 : #000000,
+//         A400 : #000000,
+//         A700 : #000000,
+//     )
+// );
+
+
+
+
+// /* For use in src/lib/core/theming/_palette.scss */
+// $azzurro-acceso: (
+//     50 : #e0fcff,
+//     100 : #b3f7ff,
+//     200 : #80f2ff,
+//     300 : #4dedff,
+//     400 : #26e9ff,
+//     500 : #00e5ff,
+//     600 : #00e2ff,
+//     700 : #00deff,
+//     800 : #00daff,
+//     900 : #00d3ff,
+//     A100 : #ffffff,
+//     A200 : #f2fdff,
+//     A400 : #bff3ff,
+//     A700 : #a6edff,
+//     contrast: (
+//         50 : #000000,
+//         100 : #000000,
+//         200 : #000000,
+//         300 : #000000,
+//         400 : #000000,
+//         500 : #000000,
+//         600 : #000000,
+//         700 : #000000,
+//         800 : #000000,
+//         900 : #000000,
+//         A100 : #000000,
+//         A200 : #000000,
+//         A400 : #000000,
+//         A700 : #000000,
+//     )
+// );
+
+
+// @use '@angular/material' as mat;
+
+// @include mat.core();
+
+
+
+// $azzurro-acceso-light-primary: mat.define-palette($azzurro-acceso, 300);
+// $grigio-azzurrino-light-accent: mat.define-palette($grigio-azzurrino, 300);
+// $my-warn: mat.define-palette($azzurro-acceso, 300);
+
+// $grigio-azzurrino-dark-primary:  mat.define-palette($grigio-azzurrino, 300);
+// $azzurro-acceso-dark-accent: mat.define-palette($azzurro-acceso, 300);
+
+
+// $my-light-theme: mat.define-light-theme((
+//  color: (
+//    primary: $azzurro-acceso-light-primary,
+//    accent: $grigio-azzurrino-light-accent,
+//    warn:$my-warn
+//  ),
+//  typography: mat.define-typography-config(),
+//  density: 0,
+// ));
+
+// $my-dark-theme: mat.define-dark-theme((
+//  color: (
+//    primary: $grigio-azzurrino-dark-primary,
+//    accent:$azzurro-acceso-dark-accent,
+//    warn:$my-warn
+//  ),
+//  typography: mat.define-typography-config(),
+//  density: 0,
+// ));
+
+// @include mat.all-component-themes($my-light-theme);
+
+// .dark-mode{
+//   @include mat.all-component-colors($my-dark-theme);
+// }
