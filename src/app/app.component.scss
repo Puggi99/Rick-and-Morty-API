@@ -1,10 +1,14 @@
 
 .container{
+  height: max-content;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  height: max-content;
+  align-content: center;
+  box-sizing: border-box;
+  border: 4px solid black;
+
 
 }
 

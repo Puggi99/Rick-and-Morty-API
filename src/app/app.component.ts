@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RickandmortService } from './services/rickandmort.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -11,7 +11,7 @@ import { Character } from './model/character';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+@Input() character?: Character
   isLight = false
 
   title = 'Rick and Morty Encyclopedia';
@@ -21,7 +21,9 @@ export class AppComponent {
   })
 
   public characterList: Character[] = [];
+  public characters: Character[] = []
 
+  
   constructor(private rickandmortserv: RickandmortService) {
 
 
@@ -35,12 +37,26 @@ export class AppComponent {
       }
     )
 
-    this.changeThemes()
+    // this.changeThemes()
   }
 
 
-changeThemes(){
-  document.body.classList.toggle('dark-mode');
-  this.isLight = !this.isLight;
+// changeThemes(){
+//   document.body.classList.toggle('dark-mode');
+//   this.isLight = !this.isLight;
+// }
+
+
+ngOnInit() {
+  this.loadCharacters();
 }
+
+// CHARACTER
+loadCharacters() {
+  this.rickandmortserv.getCharacter().subscribe({
+    next: characters => this.characters = characters,
+    error: err => console.log('Errore', err)
+  })
+}
+
 }

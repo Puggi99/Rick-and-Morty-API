@@ -18,10 +18,10 @@ export class ComponentCharacter {
     });
   }
 
-  ngOnInit() {
-    this.http.get<any>('https://rickandmortyapi.com/api/character/').subscribe(response => {
-      this.characterList = response.results.map((character: any) => character.name);
-    });
-}
+//   ngOnInit() {
+//     this.http.get<any>('https://rickandmortyapi.com/api/character/').subscribe(response => {
+//       this.characterList = response.results.map((character: any) => character.name);
+//     });
+// }
 }
 
