@@ -15,6 +15,19 @@
 </mat-toolbar>
 
 
+<div class="buttons-under-toolbar">
+  <button mat-fab extended color="secondary">
+    Character
+  </button>
+
+  <button mat-fab extended color="secondary">
+    Location
+  </button>
+
+  <button mat-fab extended color="secondary">
+    Episodes
+  </button>
+</div>
 
 
 
@@ -27,7 +40,7 @@
 
 
 
-<mat-grid-list cols="3" class="container">
+<mat-grid-list cols="3" class="container" *ngIf="!characterList?.length">
   <mat-grid-tile *ngFor="let character of characters">
      <app-character  [character]="character"></app-character>
   </mat-grid-tile>

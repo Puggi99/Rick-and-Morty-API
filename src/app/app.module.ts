@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import { ComponentCharacter } from './components/character/character.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
