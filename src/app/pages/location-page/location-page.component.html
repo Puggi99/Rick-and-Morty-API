@@ -1,12 +1,10 @@
-
-
 <mat-toolbar class="toolbar">
   <mat-toolbar-row class="toolbar-container">
     <span class="main-title">Rick and Morty API</span>
     <form class="example-form" [formGroup]="searchForm">
       <mat-form-field class="example-full-width">
-        <mat-label>Search Character</mat-label>
-        <input matInput placeholder="Ex. Rick" value="" type="text" name="" formControlName="search"
+        <mat-label>Search Location</mat-label>
+        <input matInput placeholder="Ex. SnakePlanet" value="" type="text" name="" formControlName="search"
           placeholder="search character" id="">
       </mat-form-field>
       <!-- <button mat-icon-button (click)="changeThemes()">
@@ -18,12 +16,12 @@
 
 
 <div class="buttons-under-toolbar">
-  <button mat-fab extended color="secondary">
-   <a href="./app.component.html">Character</a>
+  <button mat-fab extended color="secondary" [routerLink]="['/']">
+    Character
   </button>
 
   <button mat-fab extended color="secondary" [routerLink]="['/location-page']">
-    <a href="./pages/location-page/">Location</a>
+    Location
   </button>
 
   <button mat-fab extended color="secondary">
@@ -33,20 +31,17 @@
 
 
 
-<mat-grid-list cols="3" *ngIf="characterList?.length" class="container">
-  <mat-grid-tile *ngFor="let character of characterList">
-    <app-character [character]="character"></app-character>
+<mat-grid-list cols="3" *ngIf="locationList?.length" class="container">
+  <mat-grid-tile *ngFor="let location of locationList">
+    <app-location-page [location]="location"></app-location-page>
   </mat-grid-tile>
 </mat-grid-list>
 
 
 
 
-<mat-grid-list cols="3" class="container" *ngIf="!characterList?.length">
-  <mat-grid-tile *ngFor="let character of characters">
-     <app-character  [character]="character"></app-character>
+<mat-grid-list cols="3" class="container" *ngIf="!locationList?.length">
+  <mat-grid-tile *ngFor="let location of locations">
+    <app-location-page [location]="location"></app-location-page>
   </mat-grid-tile>
 </mat-grid-list>
-
-
-<<!-- <app-root></app-root> -->>

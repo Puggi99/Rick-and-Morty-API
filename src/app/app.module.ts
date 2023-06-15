@@ -15,12 +15,16 @@ import {MatInputModule} from '@angular/material/input';
 import { ComponentCharacter } from './components/character/character.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
+import { LocationPageComponent } from './pages/location-page/location-page.component';
+import { LocationComponent } from './components/location/location.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentCharacter
+    ComponentCharacter,
+    LocationPageComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

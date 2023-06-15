@@ -28,6 +28,22 @@ export class RickandmortService {
       })
     )
   }
+
+  getLocation(): Observable<Location[]> {
+    return this.http.get<any>(this.BASE_URL + '/location' + '?page=' + 1).pipe(
+      switchMap(location => {
+        const results = location.results;
+        const getArray = [];
+        getArray.push(results);
+        return getArray
+      })
+    )
+  }
+
+
+  getLocations(name: string){
+    return this.http.get<any>(this.BASE_URL + '/location/?page={{this.pages}}&name=' + name)
+    }
   // getPages(): any{
   //   this.http.get<any>(this.BASE_URL + '/character').subscribe(data => {this.pages = data.info.pages, console.log(this.pages)})
   //  }
