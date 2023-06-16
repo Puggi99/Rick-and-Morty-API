@@ -23,7 +23,7 @@ export class AppComponent {
   public characterList: Character[] = [];
   public characters: Character[] = []
 
-  
+
   constructor(private rickandmortserv: RickandmortService) {
 
 

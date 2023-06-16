@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +16,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import { LocationPageComponent } from './pages/location-page/location-page.component';
 import { LocationComponent } from './components/location/location.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { LocationComponent } from './components/location/location.component';
     AppComponent,
     ComponentCharacter,
     LocationPageComponent,
-    LocationComponent
+    LocationComponent,
+    
   ],
   imports: [
     BrowserModule,
