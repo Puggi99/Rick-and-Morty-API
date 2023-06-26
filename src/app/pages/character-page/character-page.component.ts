@@ -1,25 +1,26 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
-import { Result } from 'src/app/model/location';
+import { Character } from 'src/app/model/character';
 import { RickandmortService } from 'src/app/services/rickandmort.service';
 
 @Component({
-  selector: 'app-location-page',
-  templateUrl: './location-page.component.html',
-  styleUrls: ['./location-page.component.scss']
+  selector: 'app-character-page',
+  templateUrl: './character-page.component.html',
+  styleUrls: ['./character-page.component.scss']
 })
-export class LocationPageComponent {
-
+export class CharacterPageComponent {
+  @Input() character?: Character
+  isLight = false
 
   title = 'Rick and Morty Encyclopedia';
 
   searchForm: FormGroup = new FormGroup({
     search: new FormControl('')
   })
-  public locationList: Result[] = [];
-  public locations: Result[] = [];
 
+  public characterList: Character[] = [];
+  public characters: Character[] = []
 
 
   constructor(private rickandmortserv: RickandmortService) {
@@ -28,10 +29,10 @@ export class LocationPageComponent {
     this.searchForm.get('search')?.valueChanges.pipe(
       debounceTime(1000),
       distinctUntilChanged(),
-      switchMap((data) => this.rickandmortserv.getLocations(data))
+      switchMap((data) => this.rickandmortserv.getCharacters(data))
     ).subscribe(
       (data) => {
-        this.locationList = data!.results
+        this.characterList = data!.results
       }
     )
 
@@ -46,13 +47,13 @@ export class LocationPageComponent {
 
 
 ngOnInit() {
-  this.loadLocations();
+  this.loadCharacters();
 }
 
 // CHARACTER
-loadLocations() {
-  this.rickandmortserv.getLocation().subscribe({
-    next: location => this.locations = location,
+loadCharacters() {
+  this.rickandmortserv.getCharacter().subscribe({
+    next: characters => this.characters = characters,
     error: err => console.log('Errore', err)
   })
 }

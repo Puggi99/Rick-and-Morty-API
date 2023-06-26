@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 
@@ -18,6 +19,9 @@ import { LocationPageComponent } from './pages/location-page/location-page.compo
 import { LocationComponent } from './components/location/location.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { EpisodeComponent } from './components/episode/episode.component';
+import { EpisodePageComponent } from './pages/episode-page/episode-page.component';
 
 
 @NgModule({
@@ -26,7 +30,10 @@ import { AppComponent } from './app.component';
     ComponentCharacter,
     LocationPageComponent,
     LocationComponent,
-    
+    CharacterPageComponent,
+    EpisodeComponent,
+    EpisodePageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { AppComponent } from './app.component';
     MatInputModule,
     MatIconModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    DatePipe
   ],
   providers: [],
   bootstrap: [AppComponent]

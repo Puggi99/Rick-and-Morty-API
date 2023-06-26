@@ -1,0 +1,28 @@
+<form class="example-form" [formGroup]="searchForm">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Episode</mat-label>
+    <input matInput placeholder="Ex. SnakePlanet" value="" type="text" name="" formControlName="search"
+      placeholder="Search Episode" id="">
+  </mat-form-field>
+  <!-- <button mat-icon-button (click)="changeThemes()">
+    <mat-icon>{{isLight ? "dark_mode" : "light_mode"}}</mat-icon>
+  </button> -->
+</form>
+
+
+
+
+<mat-grid-list cols="3" *ngIf="episodeList?.length" class="container">
+  <mat-grid-tile *ngFor="let episode of episodeList">
+     <app-episode [episode]="episode"></app-episode>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+<mat-grid-list cols="3" class="container" *ngIf="!episodeList?.length">
+  <mat-grid-tile *ngFor="let episode of episodes">
+    <app-episode [episode]="episode"></app-episode>
+  </mat-grid-tile>
+</mat-grid-list>

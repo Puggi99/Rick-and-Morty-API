@@ -27,9 +27,13 @@
 }
 
 .example-form{
-  padding-top: 20px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 1vw;
 
+}
 
 .mat-grid-list{
   margin-top: 0px;
@@ -50,3 +54,11 @@
   margin-top: 3vw;
   padding: 10px;
 }
+
+// .mat-grid-list {
+//   margin-bottom: -300px; /* Riduce il margine inferiore della griglia */
+// }
+
+// .mat-grid-tile {
+// padding:-300px
+// }

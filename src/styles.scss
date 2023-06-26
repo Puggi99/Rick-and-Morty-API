@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Roboto", "cursive" ;background-color: #80DEEA;}
+body {
+margin: 0;
+font-family: "Roboto", "cursive" ;
+background-color: #80DEEA;
+background-image: url('./assets/3a2c7620d168f1faff4e861c4029e84f.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.mdc-text-field{
+  background-color:rgba(137, 43, 226, 0.712) !important;
+  font-family: 'Fredoka One', cursive;
+
+}
+.ng-tns-c1607617776-0, .ng-tns-c1607617776-1{
+  font-family: 'Fredoka One', cursive !important;
+
+}

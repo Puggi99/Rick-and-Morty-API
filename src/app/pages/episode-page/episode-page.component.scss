@@ -18,23 +18,23 @@
 
 
 .toolbar{
-  background-color: #4dd0e1c0;
-
+  background-color: #4DD0E1;
 }
 
 .toolbar-container{
   display: flex;
   justify-content: space-between;
-
-  button{
-    all: unset;
-    cursor:pointer;
-  }
 }
 
 .example-form{
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 1vw;
+
 }
+
 
 
 .mat-grid-list{
@@ -57,8 +57,11 @@
   padding: 10px;
 }
 
-.pathButtons{
-  background-color: #4dd0e1bb;
-}
+// .mat-grid-list {
+//   margin-bottom: -300px; /* Riduce il margine inferiore della griglia */
+// }
 
+// .mat-grid-tile {
+// padding:-300px
+// }
 
