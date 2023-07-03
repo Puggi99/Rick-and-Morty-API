@@ -1,14 +1,30 @@
 .example-card {
   display: flex;
   flex-direction: column;
-  height: max-content;
-  background-color: #E0F7FA;
-  max-width: 500px;
-  min-width: 20vw;
-
+  justify-content: space-around;
+  height: 35vh;
+  width: 35vh;
+  border-radius: 40px;
+  color: white;
 }
 
-.subtitle{
+.subtitle {
   color: gray;
 }
 
+
+.transparent-image::after {
+  background-image: url('./location-assets/c930c-clickwallpapers-rickandmorty-desenho-4k-img8-minbase-scaled-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.4;
+
+}
+
+
+.text{
+  opacity: 1 !important;
+
+}

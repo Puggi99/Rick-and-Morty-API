@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Result } from 'src/app/model/episodes';
+import { Result, Info } from 'src/app/model/episodes';
 import { RickandmortService } from 'src/app/services/rickandmort.service';
 
 @Component({

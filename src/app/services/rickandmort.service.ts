@@ -70,5 +70,41 @@ export class RickandmortService {
   getEpisodes(name: string){
     return this.http.get<any>(this.BASE_URL + '/episode/?page={{this.pages}}&name=' + name)
     }
+
+    getCharactersByPage(page: number): Observable<Character[]> {
+      const url = `${this.BASE_URL + '/character'}?page=${page}`;
+      return this.http.get<any>(url).pipe(
+        switchMap(character => {
+          const results = character.results;
+          const getArray = [];
+          getArray.push(results);
+          return getArray;
+        })
+      );
+    }
+
+    getLocationByPage(page: number): Observable<Result[]> {
+      const url = `${this.BASE_URL + '/location'}?page=${page}`;
+      return this.http.get<any>(url).pipe(
+        switchMap(locations => {
+          const results = locations.results;
+          const getArray = [];
+          getArray.push(results);
+          return getArray;
+        })
+      );
+    }
+
+    getEpisodeByPage(page: number): Observable<Episode[]> {
+      const url = `${this.BASE_URL + '/episode'}?page=${page}`;
+      return this.http.get<any>(url).pipe(
+        switchMap(episode => {
+          const results = episode.results;
+          const getArray = [];
+          getArray.push(results);
+          return getArray;
+        })
+      );
+    }
 }
 

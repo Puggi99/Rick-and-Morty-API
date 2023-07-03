@@ -1,22 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('./fonts/get_schwifty.ttf') format('ttf');
+  /* Altri formati di font se disponibili */
+}
 
 html, body { height: 100%; }
 body {
 margin: 0;
 font-family: "Roboto", "cursive" ;
 background-color: #80DEEA;
-background-image: url('./assets/3a2c7620d168f1faff4e861c4029e84f.jpg');
+background-image: url('./app/assets/4244690.webp');
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
+background-position: center center;
+
 }
 
 .mdc-text-field{
-  background-color:rgba(137, 43, 226, 0.712) !important;
+
+  background-color: rgba(116, 214, 137, 0.753)!important;
   font-family: 'Fredoka One', cursive;
 
 }
 .ng-tns-c1607617776-0, .ng-tns-c1607617776-1{
   font-family: 'Fredoka One', cursive !important;
-
+  color:  #4dd0e1f1;
 }
+
+
+
+.mat-mdc-button-persistent-ripple mdc-fab__ripple{
+  border-radius: none !important;
+  border-color: red; /* Cambia il colore dei bordi a rosso */
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  body {
+    background-image: url('./app/assets/lockscreen-rick-and-morty-wallpaper.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+}
+
+
+*{
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 0, 0.705);
+  font-family: 'Get Schwifty', cursive !important;
+}
+

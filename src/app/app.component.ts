@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RickandmortService } from './services/rickandmort.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
@@ -10,7 +10,7 @@ import { Character } from './model/character';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 @Input() character?: Character
   isLight = false
 
@@ -24,8 +24,8 @@ export class AppComponent {
   public characters: Character[] = []
 
 
-  constructor(private rickandmortserv: RickandmortService) {
 
+  constructor(private rickandmortserv: RickandmortService) {
 
     this.searchForm.get('search')?.valueChanges.pipe(
       debounceTime(1000),

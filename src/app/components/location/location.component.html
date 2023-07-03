@@ -5,14 +5,13 @@
 </div>
  -->
 
-<mat-card class="example-card">
-  <mat-card-header>
+<mat-card class="example-card transparent-image">
+  <mat-card-header class="text">
     <mat-card-title>{{location?.name}}</mat-card-title>
     <mat-card-subtitle class="subtitle">Type: {{location?.type}}</mat-card-subtitle>
   </mat-card-header>
     <mat-card-content>Dimension: {{ location?.dimension }}</mat-card-content>
     <mat-card-content>Created in date: {{ location?.created | date: "dd-MM-yyyy" }} </mat-card-content>
-
-
+    <div class="background-overlay"></div>
 </mat-card>
 

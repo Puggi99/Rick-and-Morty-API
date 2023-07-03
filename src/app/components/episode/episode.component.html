@@ -1,8 +1,9 @@
-<mat-card class="example-card">
-  <mat-card-header>
+<mat-card class="example-card transparent-image">
+  <mat-card-header class="text">
     <mat-card-title>{{episode?.name}}</mat-card-title>
     <mat-card-subtitle class="subtitle">Air Date: {{episode?.air_date}}</mat-card-subtitle>
   </mat-card-header>
     <mat-card-content>Episode: {{ episode?.episode }}</mat-card-content>
-    <mat-card-content><a href=" {{ episode?.url }}"> {{ episode?.url }}</a> </mat-card-content>
-</mat-card>
+    <mat-card-content><a href="{{ episode?.url }}"> {{ episode?.url }}</a> </mat-card-content>
+    <div class="background-overlay"></div>
+  </mat-card>

@@ -20,8 +20,8 @@ import { LocationComponent } from './components/location/location.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
-import { EpisodeComponent } from './components/episode/episode.component';
 import { EpisodePageComponent } from './pages/episode-page/episode-page.component';
+import { EpisodeComponent } from './components/episode/episode.component';
 
 
 @NgModule({

@@ -1,3 +1,17 @@
+.image-title {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./assets/Rick-And-Morty-PNG-High-Quality-Image.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff; /* colore del testo */
+  text-align: center;
+  padding: 20px;
+}
+
 
 .container{
   height: max-content;
@@ -29,6 +43,7 @@
   button{
     all: unset;
     cursor:pointer;
+
   }
 }
 
@@ -55,10 +70,26 @@
   justify-content:space-evenly;
   margin-top: 3vw;
   padding: 10px;
+
+
 }
 
 .pathButtons{
-  background-color: #4dd0e1bb;
+
+  background-color: rgba(70, 238, 238, 0.781);
+  border: 2px solid yellow;
+  border-radius: 24px;
+  padding: 15px;
+  font-size: 20px;
+  color: black;
+  -webkit-text-stroke-width: 0.5px !important;
+  -webkit-text-stroke-color: yellow !important;
+  font-family: 'Get Schwifty', cursive !important;
 }
 
 
+button{
+  all: unset;
+  cursor:pointer;
+
+}

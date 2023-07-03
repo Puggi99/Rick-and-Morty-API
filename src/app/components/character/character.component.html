@@ -1,8 +1,24 @@
-<mat-card class="example-card">
-  <mat-card-header class="text">
-    <mat-card-title>{{character?.name}}</mat-card-title>
-    <mat-card-subtitle class="subtitle">{{character?.species}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{character?.image}}" alt="Photo of a Shiba Inu">
-</mat-card>
+<mat-card class="example-card"
+  (mouseenter)="toggleHoverState()" (mouseleave)="resetCardState()"
+  (click)="toggleClickState()"
+  [@hoverAnimation]="isHovered && !isClicked ? 'hovered' : 'notHovered'"
+  [@clickAnimation]="isClicked ? 'clicked' : 'notClicked'"
+  (@clickAnimation.start)="resetCardState()">
 
+  <ng-container *ngIf="!isClicked; else flippedContent">
+    <img mat-card-image src="{{character?.image}}">
+  </ng-container>
+
+  <ng-template #flippedContent class="flipped-card">
+    <img mat-card-image src="{{character?.image}}" [ngClass]="{'unflipped-header': isClicked}">
+    <mat-card-header class="text-overlay" [ngClass]="{'unflipped-header': isClicked}">
+      <mat-card-title>{{character?.name}}</mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        {{character?.species}},
+        <span [ngStyle]="{ color: getStatusColor(character?.status) }">{{character?.status}}</span>
+      </mat-card-subtitle>
+      <mat-card-content>Origin: {{character?.origin?.name}}</mat-card-content>
+      <mat-card-content>Location: {{character?.location?.name}}</mat-card-content>
+    </mat-card-header>
+  </ng-template>
+</mat-card>
