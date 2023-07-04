@@ -5,35 +5,42 @@
   /* Altri formati di font se disponibili */
 }
 
-html, body { height: 100%; }
+html,
 body {
-margin: 0;
-font-family: "Roboto", "cursive" ;
-background-color: #80DEEA;
-background-image: url('./app/assets/4244690.webp');
-background-repeat: no-repeat;
-background-size: cover;
-background-attachment: fixed;
-background-position: center center;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "cursive";
+  background-color: #80DEEA;
+  background-image: url('./app/assets/4244690.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 
 }
 
-.mdc-text-field{
+.mdc-text-field {
 
-  background-color: rgba(116, 214, 137, 0.753)!important;
+  background-color: rgba(116, 214, 137, 0.753) !important;
   font-family: 'Fredoka One', cursive;
 
 }
-.ng-tns-c1607617776-0, .ng-tns-c1607617776-1{
+
+.ng-tns-c1607617776-0,
+.ng-tns-c1607617776-1 {
   font-family: 'Fredoka One', cursive !important;
-  color:  #4dd0e1f1;
+  color: #4dd0e1f1;
 }
 
 
 
-.mat-mdc-button-persistent-ripple mdc-fab__ripple{
+.mat-mdc-button-persistent-ripple mdc-fab__ripple {
   border-radius: none !important;
-  border-color: red; /* Cambia il colore dei bordi a rosso */
+  border-color: red;
+  /* Cambia il colore dei bordi a rosso */
 }
 
 
@@ -41,15 +48,17 @@ background-position: center center;
 @media screen and (min-width: 0px) and (max-width: 1024px) {
   body {
     background-image: url('./app/assets/lockscreen-rick-and-morty-wallpaper.jpg');
-    background-size:cover;
-    background-position: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
 
-*{
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: rgba(255, 255, 0, 0.705);
+* {
+  // -webkit-text-stroke-width: 0.5px;
+  // -webkit-text-stroke-color: rgba(255, 255, 0, 0.705);
   font-family: 'Get Schwifty', cursive !important;
 }
-
