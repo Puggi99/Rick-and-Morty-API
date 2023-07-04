@@ -57,7 +57,7 @@ export class CharacterPageComponent {
   }
 
   onSearch() {
-    const searchTerm = this.searchForm.get('search')?.value?.toLowerCase() || '';
+    const searchTerm = this.searchForm.get('search')?.value?.trim().toLowerCase() || '';
     this.searchTerm = searchTerm;
     this.currentPage = 1;
     this.loadCharacters();
