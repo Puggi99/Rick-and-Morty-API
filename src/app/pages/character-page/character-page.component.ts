@@ -56,37 +56,38 @@ export class CharacterPageComponent {
 
   }
 
-onSearch() {
-  const searchTerm = this.searchForm.get('search')?.value?.toLowerCase() || '';
-  this.searchTerm = searchTerm;
-  this.currentPage = 1;
-  this.loadCharacters();
-
-  if (searchTerm === 'dead' || searchTerm === 'alive' || searchTerm === 'unknown') {
-    const url = `https://rickandmortyapi.com/api/character?status=${searchTerm}`;
-    this.http.get<any>(url)
-      .subscribe(data => {
-        this.characterList = data.results;
-      });
-  } else if (searchTerm) {
-    this.rickandmortserv.getCharacters(searchTerm).subscribe(
-      (data) => {
-        this.characterList = data.results;
-      },
-      (error) => {
-        console.log('Non ho trovato nessuno', error);
-        this.characterList = [];
-        this.notFound = true
-
-
-      }
-    );
-  } else {
-    this.characterList = [];
+  onSearch() {
+    const searchTerm = this.searchForm.get('search')?.value?.toLowerCase() || '';
+    this.searchTerm = searchTerm;
     this.currentPage = 1;
-    this.notFound = false
+    this.loadCharacters();
+
+    if (searchTerm === 'dead' || searchTerm === 'alive' || searchTerm === 'unknown') {
+      const url = `https://rickandmortyapi.com/api/character?status=${searchTerm}`;
+      this.http.get<any>(url)
+        .subscribe(data => {
+          this.characterList = data.results;
+          this.notFound = this.characterList.length === 0; // Aggiunta della verifica per notFound
+        });
+    } else if (searchTerm) {
+      this.rickandmortserv.getCharacters(searchTerm).subscribe(
+        (data) => {
+          this.characterList = data.results;
+          this.notFound = this.characterList.length === 0; // Aggiunta della verifica per notFound
+        },
+        (error) => {
+          console.log('Non ho trovato nessuno', error);
+          this.characterList = [];
+          this.notFound = true;
+        }
+      );
+    } else {
+      this.characterList = [];
+      this.currentPage = 1;
+      this.notFound = false;
+    }
   }
-}
+
 
 
 
