@@ -16,7 +16,7 @@
   {{this.currentPage}}
   <button mat-button (click)="loadNextPage()">Next </button>
   </div>
-
+0
 
 
 <div *ngIf="notFound" class="notFound">
@@ -42,7 +42,7 @@
 <div class="changingPagesBtn">
   <button mat-button (click)="loadPreviousPage()"><-</button>
   <div class="smallPages" (click)="loadPreviousPage()">{{this.currentPage -1}}</div>
-   {{this.currentPage}} 
+   {{this.currentPage}}
    <div class="smallPages" (click)="loadNextPage()">{{this.currentPage +1}}</div>
   <button mat-button (click)="loadNextPage()">-></button>
 </div>
