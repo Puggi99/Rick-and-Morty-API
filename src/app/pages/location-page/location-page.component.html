@@ -30,6 +30,8 @@
 
 <div class="changingPagesBtn">
   <button mat-button (click)="loadPreviousPage()"><-</button>
-  {{this.currentPage}}
+  <div class="smallPages" (click)="loadPreviousPage()">{{this.currentPage -1}}</div>
+   {{this.currentPage}}
+   <div class="smallPages" (click)="loadNextPage()">{{this.currentPage +1}}</div>
   <button mat-button (click)="loadNextPage()">-></button>
 </div>

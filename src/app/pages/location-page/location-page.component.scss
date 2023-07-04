@@ -1,4 +1,4 @@
-.example-form{
+.example-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,12 +6,12 @@
   padding-left: 1vw;
 }
 
-.mat-form-field-input{
+.mat-form-field-input {
   font-family: 'Fredoka One', cursive !important;
 }
 
 
-.container{
+.container {
   height: max-content;
   width: 100vw;
   display: flex;
@@ -24,19 +24,19 @@
 
 }
 
-.main-title{
+.main-title {
   font-family: 'Fredoka One', cursive;
 }
 
 
-.toolbar-container{
+.toolbar-container {
   display: flex;
   justify-content: space-between;
 }
 
 
 
-.mat-grid-list{
+.mat-grid-list {
   margin-top: 0px;
   padding-top: 0px;
 }
@@ -49,9 +49,9 @@
 // }
 
 
-.buttons-under-toolbar{
+.buttons-under-toolbar {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin-top: 3vw;
   padding: 10px;
 }
@@ -66,14 +66,24 @@
 
 
 .card-padding {
-  padding: 1900px; /* Imposta il valore di padding desiderato */
+  padding: 1900px;
+  /* Imposta il valore di padding desiderato */
 }
 
 
-.changingPagesBtn{
-display: flex;
-justify-content: center;
-align-items: center;
-color: yellow;
-font-size: 20px;
+.changingPagesBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  font-size: 20px;
+}
+
+
+.smallPages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  font-size: 11px;
 }
